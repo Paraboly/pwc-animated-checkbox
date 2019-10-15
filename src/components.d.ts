@@ -10,7 +10,13 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 export namespace Components {
   interface PwcAnimatedCheckbox {
+    /**
+    * Set the base name for multiple usage
+    */
     'baseName': string;
+    /**
+    * Set the checkbox's right side text property
+    */
     'checkboxText': string;
     /**
     * Default checked value
@@ -34,7 +40,13 @@ declare global {
 
 declare namespace LocalJSX {
   interface PwcAnimatedCheckbox {
+    /**
+    * Set the base name for multiple usage
+    */
     'baseName'?: string;
+    /**
+    * Set the checkbox's right side text property
+    */
     'checkboxText'?: string;
     /**
     * Default checked value
@@ -43,7 +55,7 @@ declare namespace LocalJSX {
     /**
     * onChange method for checkbox event
     */
-    'onOn-checked-change'?: (event: CustomEvent<any>) => void;
+    'onCheckedEvent'?: (event: CustomEvent<any>) => void;
   }
 
   interface IntrinsicElements {

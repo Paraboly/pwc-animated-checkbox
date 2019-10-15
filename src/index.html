@@ -12,8 +12,7 @@
     <script nomodule src="/build/pwc-animated-checkbox.js"></script>
   </head>
   <body>
-
-  <style>
+    <style>
       @import url("https://fonts.googleapis.com/css?family=Oswald&display=swap");
       body {
         width: 100vw;
@@ -25,15 +24,32 @@
         font-family: Oswald, opensans, Helvetica Neue, Helvetica, Arial,
           sans-serif;
       }
-  
+
       pwc-animated-checkbox {
         margin: auto;
+        margin-top: 12px;
       }
+    </style>
 
-  </style>
-    <pwc-animated-checkbox
-      on-checked-change={(checked) => console.log('onCheckChange!', checked)}
-    >
-    </pwc-animated-checkbox>
+    <pwc-animated-checkbox></pwc-animated-checkbox>
+    <pwc-animated-checkbox></pwc-animated-checkbox>
+    <pwc-animated-checkbox></pwc-animated-checkbox>
+    <pwc-animated-checkbox></pwc-animated-checkbox>
+
+    <script>
+      // Multiple Checkboxes
+      const pwcCheckboxes = document.querySelectorAll("pwc-animated-checkbox");
+      pwcCheckboxes.forEach(element => {
+        element.addEventListener("checkedEvent", event => {
+          console.log("Event: ", event.detail);
+        });
+      });
+
+      // Selects the first checkbox
+      const pwcCheckbox = document.querySelector("pwc-animated-checkbox");
+      pwcCheckbox.addEventListener("checkedEvent", event => {
+        console.log("First Element Event: ", event.detail);
+      });
+    </script>
   </body>
 </html>

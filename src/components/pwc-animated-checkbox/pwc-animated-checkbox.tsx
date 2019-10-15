@@ -8,28 +8,38 @@ import { Component, Prop, h, Event, EventEmitter } from "@stencil/core";
 export class MyComponent {
   checkboxInput: HTMLInputElement;
 
+  /**
+   * Set the checkbox's right side text property
+   */
   @Prop() checkboxText: string = "Checkbox";
   /**
-   * onChange method for checkbox event
+   * Set the base name for multiple usage
    */
-  @Event({
-    eventName: "on-checked-change",
-    composed: true,
-    cancelable: true,
-    bubbles: true
-  })
-  checkedChangeEmitter: EventEmitter;
-
-  checkedChangeHandler(checked: boolean) {
-    this.checkedChangeEmitter.emit(checked);
-  }
-
   @Prop() baseName: string = "base";
 
   /**
    * Default checked value
    */
   @Prop({ mutable: true, reflect: true }) isChecked: boolean = false;
+
+  /**
+   * onChange method for checkbox event
+   */
+  @Event({
+    eventName: "checkedEvent",
+    composed: true,
+    cancelable: true,
+    bubbles: true
+  })
+  checkedChangeEmitter: EventEmitter;
+
+  /**
+   *
+   * @param checked
+   */
+  checkedChangeHandler(checked: boolean) {
+    this.checkedChangeEmitter.emit({ checked });
+  }
 
   render() {
     return (
@@ -41,11 +51,9 @@ export class MyComponent {
               type="checkbox"
               ref={el => (this.checkboxInput = el as HTMLInputElement)}
               checked={this.isChecked}
-              onChange={() => {
-                const { checked } = this.checkboxInput;
-                console.log("Checked : ", checked);
-                this.checkedChangeHandler(checked);
-              }}
+              onChange={() =>
+                this.checkedChangeHandler(this.checkboxInput.checked)
+              }
             />
             <label htmlFor="read">
               <span></span>
