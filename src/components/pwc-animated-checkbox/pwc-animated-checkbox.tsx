@@ -13,15 +13,15 @@ export class MyComponent {
    * onChange method for checkbox event
    */
   @Event({
-    eventName: "onCheckedChange",
+    eventName: "on-checked-change",
     composed: true,
     cancelable: true,
     bubbles: true
   })
-  todoCompleted: EventEmitter;
+  checkedChangeEmitter: EventEmitter;
 
-  todoCompletedHandler(checked: boolean) {
-    this.todoCompleted.emit(checked);
+  checkedChangeHandler(checked: boolean) {
+    this.checkedChangeEmitter.emit(checked);
   }
 
   @Prop() baseName: string = "base";
@@ -44,7 +44,7 @@ export class MyComponent {
               onChange={() => {
                 const { checked } = this.checkboxInput;
                 console.log("Checked : ", checked);
-                this.todoCompletedHandler(checked);
+                this.checkedChangeHandler(checked);
               }}
             />
             <label htmlFor="read">

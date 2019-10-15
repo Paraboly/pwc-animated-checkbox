@@ -12,8 +12,27 @@
     <script nomodule src="/build/pwc-animated-checkbox.js"></script>
   </head>
   <body>
+
+  <style>
+      @import url("https://fonts.googleapis.com/css?family=Oswald&display=swap");
+      body {
+        width: 100vw;
+        height: 85vh;
+        display: flex;
+        flex-direction: column;
+        font-size: 13px;
+        background-color: #fff;
+        font-family: Oswald, opensans, Helvetica Neue, Helvetica, Arial,
+          sans-serif;
+      }
+  
+      pwc-animated-checkbox {
+        margin: auto;
+      }
+
+  </style>
     <pwc-animated-checkbox
-      onCheckedChange="{(checked) => console.log('onCheckChange!', checked)}"
+      on-checked-change={(checked) => console.log('onCheckChange!', checked)}
     >
     </pwc-animated-checkbox>
   </body>

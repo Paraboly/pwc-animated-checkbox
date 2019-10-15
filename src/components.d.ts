@@ -43,7 +43,7 @@ declare namespace LocalJSX {
     /**
     * onChange method for checkbox event
     */
-    'onOnCheckedChange'?: (event: CustomEvent<any>) => void;
+    'onOn-checked-change'?: (event: CustomEvent<any>) => void;
   }
 
   interface IntrinsicElements {
