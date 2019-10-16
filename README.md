@@ -15,8 +15,8 @@
 ## Basic animated-checkbox Screenshots
 
 <p align="center">
-  <img alt="WebComponent PWC Animated Checkbox" src="assets/example.gif" width="49%" height="150" />
-  <img alt="WebComponent PWC Animated Checkbox" src="assets/example.png" width="49%" height="150" />
+  <img alt="WebComponent PWC Animated Checkbox" src="assets/example.gif" width="49%" />
+  <img alt="WebComponent PWC Animated Checkbox" src="assets/example.png" width="49%" />
 </p>
 
 ## Installation
