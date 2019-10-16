@@ -73,8 +73,8 @@ label {
       top: 16px; // you'll need to experiment with placement depending on the dimensions you've chosen
     }
   }
-  // Time to add some life to it
 
+  // Time to add some life to it
   &:hover {
     span {
       &:before {
@@ -93,13 +93,44 @@ label {
 input[type="checkbox"] {
   opacity: 0;
   z-index: 10;
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  margin-top: -1px;
   border-radius: 50%;
-  margin-right: -30px;
   position: relative;
+  margin-right: -36px;
   transform-origin: center;
   background-color: transparent;
+
+  // Now we'll create the "tick" using pseudo elements - those will be basically two lines that will be rotated to form the "tick"
+  &:before {
+    content: "";
+    width: 0px;
+    height: 2px;
+    border-radius: 2px; // so that the tick has nice rounded look
+    position: absolute;
+    background: $base-color;
+    transform-origin: 0% 0%;
+    transform: rotate(45deg);
+    transition: width 50ms ease 50ms;
+    left: 9px; // you'll need to experiment with placement depending on the dimensions you've chosen
+    top: 13px; // you'll need to experiment with placement depending on the dimensions you've chosen
+  }
+
+  &:after {
+    content: "";
+    width: 0;
+    height: 2px;
+    border-radius: 2px; // so that the tick has nice rounded look
+    position: absolute;
+    transform-origin: 0% 0%;
+    background: $base-color;
+    transform: rotate(305deg);
+    transition: width 50ms ease;
+    left: 10px; // you'll need to experiment with placement depending on the dimensions you've chosen
+    top: 16px; // you'll need to experiment with placement depending on the dimensions you've chosen
+  }
 
   // Let's add some effects after the checkbox is checked
   &:checked {

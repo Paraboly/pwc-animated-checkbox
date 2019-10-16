@@ -5,17 +5,13 @@ import { Component, Prop, h, Event, EventEmitter } from "@stencil/core";
   styleUrl: "pwc-animated-checkbox.scss",
   shadow: true
 })
-export class MyComponent {
+export class PWCAnimatedCheckbox {
   checkboxInput: HTMLInputElement;
 
   /**
    * Set the checkbox's right side text property
    */
   @Prop() checkboxText: string = "Checkbox";
-  /**
-   * Set the base name for multiple usage
-   */
-  @Prop() baseName: string = "base";
 
   /**
    * Default checked value
@@ -27,9 +23,9 @@ export class MyComponent {
    */
   @Event({
     eventName: "checkedEvent",
+    bubbles: true,
     composed: true,
-    cancelable: true,
-    bubbles: true
+    cancelable: true
   })
   checkedChangeEmitter: EventEmitter;
 
@@ -49,13 +45,13 @@ export class MyComponent {
             <input
               class="message"
               type="checkbox"
-              ref={el => (this.checkboxInput = el as HTMLInputElement)}
               checked={this.isChecked}
+              ref={el => (this.checkboxInput = el as HTMLInputElement)}
               onChange={() =>
                 this.checkedChangeHandler(this.checkboxInput.checked)
               }
             />
-            <label htmlFor="read">
+            <label htmlFor="checkbox">
               <span></span>
             </label>
             <span class="content-text-style">{this.checkboxText}</span>

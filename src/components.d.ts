@@ -11,10 +11,6 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 export namespace Components {
   interface PwcAnimatedCheckbox {
     /**
-    * Set the base name for multiple usage
-    */
-    'baseName': string;
-    /**
     * Set the checkbox's right side text property
     */
     'checkboxText': string;
@@ -40,10 +36,6 @@ declare global {
 
 declare namespace LocalJSX {
   interface PwcAnimatedCheckbox {
-    /**
-    * Set the base name for multiple usage
-    */
-    'baseName'?: string;
     /**
     * Set the checkbox's right side text property
     */
