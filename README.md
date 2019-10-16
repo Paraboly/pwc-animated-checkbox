@@ -3,7 +3,7 @@
 <img alt="WebComponent PWC animated-checkbox" src="assets/logo.png" width="1050"/>
 
 
-[![Fully customizable animated-checkbox web component with StencilJS via Paraboly](https://img.shields.io/badge/-Fully%20customizable%20animated-checkbox%20web%20component%20with%20StencilJS%20via%20Paraboly-lightgrey?style=for-the-badge)](https://github.com/Paraboly/pwc-animated-checkbox)
+[![Fully customizable animated-checkbox web component with StencilJS via Paraboly](https://img.shields.io/badge/-Fully%20customizable%20animated--checkbox%20web%20component%20with%20StencilJS%20via%20Paraboly-lightgrey?style=for-the-badge)](https://github.com/Paraboly/pwc-animated-checkbox)
 
 
 [![npm version](https://img.shields.io/npm/v/@paraboly/pwc-animated-checkbox.svg?style=for-the-badge)](https://www.npmjs.com/package/@paraboly/pwc-animated-checkbox)
