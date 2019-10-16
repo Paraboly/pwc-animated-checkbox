@@ -10,6 +10,8 @@
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
   "unpkg": "dist/pwc-animated-checkbox/pwc-animated-checkbox.js",
+  "repository": "git@github.com:Paraboly/pwc-animated-checkbox.git",
+  "author": "Kuray (FreakyCoder) <kurayogun@gmail.com>",
   "files": [
     "dist/",
     "loader/"
