@@ -76,4 +76,4 @@ FreakyCoder, kuray.ogun@paraboly.com | kurayogun@gmail.com
 
 ## License
 
-WebComponent PWC PWC animated-checkbox is available under the MIT license. See the LICENSE file for more info.
+WebComponent PWC animated-checkbox is available under the MIT license. See the LICENSE file for more info.
