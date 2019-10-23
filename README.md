@@ -19,11 +19,12 @@
   <img alt="WebComponent PWC Animated Checkbox" src="assets/example.png" width="49%" />
 </p>
 
+# [Live CodePen Example](https://codepen.io/wrathchaos/pen/dyyvRzM)
+
 ## Installation
 
 ### Script tag
 
-- [Publish to NPM](https://docs.npmjs.com/getting-started/publishing-npm-packages)
 - Put a script tag similar to this `<script	type="module" src="https://unpkg.com/@paraboly/pwc-animated-checkbox@latest/dist/pwc-animated-checkbox/pwc-animated-checkbox.esm.js"></script>` in the head of your index.html
 - Then you can use the element anywhere in your template, JSX, html etc
 
