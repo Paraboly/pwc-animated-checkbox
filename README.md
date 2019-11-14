@@ -19,7 +19,7 @@
   <img alt="WebComponent PWC Animated Checkbox" src="assets/example.png" width="49%" />
 </p>
 
-## [Live Codepen Example](https://codepen.io/wrathchaos/pen/dyyvRzM)
+## [Live Codepen Example](https://codepen.io/wrathchaos/pen/YzzJxZy)
 
 ## Installation
 
